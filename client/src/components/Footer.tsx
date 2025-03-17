@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="col-span-1 md:col-span-1">
             <Link href="/">
-              <a className="flex items-center gap-2 mb-6">
+              <div className="flex items-center gap-2 mb-6 cursor-pointer">
                 <div className="w-10 h-10 relative">
                   <div className="absolute inset-0 rounded-full bg-neon-cyan opacity-20 animate-pulse"></div>
                   <div className="absolute inset-[2px] rounded-full bg-space-dark flex items-center justify-center">
@@ -15,7 +15,7 @@ const Footer = () => {
                   </div>
                 </div>
                 <span className="font-space font-bold text-xl tracking-wider">DUBAI SPACEPORT</span>
-              </a>
+              </div>
             </Link>
             <p className="text-gray-400 mb-6">The future of space travel begins in Dubai. Experience the cosmos like never before with our premium space tourism services.</p>
             <div className="flex gap-4">

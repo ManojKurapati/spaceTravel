@@ -226,9 +226,9 @@ const Dashboard = () => {
                         
                         <div className="flex justify-between">
                           <Link href={`/booking/${booking.id}`}>
-                            <a className="neo-border px-4 py-2 rounded-lg text-neon-cyan text-sm hover:bg-glass-white transition-all">
+                            <div className="neo-border px-4 py-2 rounded-lg text-neon-cyan text-sm hover:bg-glass-white transition-all cursor-pointer">
                               View Details
-                            </a>
+                            </div>
                           </Link>
                           
                           {booking.status === 'pending' && (
@@ -294,9 +294,9 @@ const Dashboard = () => {
                         
                         <div className="flex justify-between">
                           <Link href={`/booking/${booking.id}`}>
-                            <a className="neo-border px-4 py-2 rounded-lg text-neon-cyan text-sm hover:bg-glass-white transition-all">
+                            <div className="neo-border px-4 py-2 rounded-lg text-neon-cyan text-sm hover:bg-glass-white transition-all cursor-pointer">
                               View Details
-                            </a>
+                            </div>
                           </Link>
                           
                           <button className="bg-glass-white px-4 py-2 rounded-lg text-sm hover:bg-white/20 transition-all">
