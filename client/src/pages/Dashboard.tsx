@@ -121,14 +121,14 @@ const Dashboard = () => {
               <p className="text-gray-400">Manage your bookings and prepare for your cosmic adventures</p>
             </div>
             <Link href="/#book">
-              <motion.a 
-                className="mt-4 md:mt-0 bg-gradient-to-r from-neon-blue to-neon-magenta px-6 py-3 rounded-xl text-white font-space font-medium hover:shadow-lg hover:shadow-neon-magenta/30 transition-all duration-300 inline-flex items-center gap-2"
+              <motion.div 
+                className="mt-4 md:mt-0 bg-gradient-to-r from-neon-blue to-neon-magenta px-6 py-3 rounded-xl text-white font-space font-medium hover:shadow-lg hover:shadow-neon-magenta/30 transition-all duration-300 inline-flex items-center gap-2 cursor-pointer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <i className="fas fa-rocket"></i>
                 Book New Trip
-              </motion.a>
+              </motion.div>
             </Link>
           </div>
           

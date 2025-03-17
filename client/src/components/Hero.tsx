@@ -64,22 +64,22 @@ const Hero = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Link href="/#destinations">
-                <motion.a
-                  className="bg-gradient-to-r from-neon-blue to-neon-magenta px-8 py-3 rounded-xl text-white font-space font-medium hover:shadow-lg hover:shadow-neon-magenta/30 transition-all duration-300 text-center"
+                <motion.div
+                  className="bg-gradient-to-r from-neon-blue to-neon-magenta px-8 py-3 rounded-xl text-white font-space font-medium hover:shadow-lg hover:shadow-neon-magenta/30 transition-all duration-300 text-center cursor-pointer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Explore Destinations
-                </motion.a>
+                </motion.div>
               </Link>
               <Link href="/#schedule">
-                <motion.a
-                  className="neo-border px-8 py-3 rounded-xl text-neon-cyan font-space font-medium hover:bg-glass-white transition-all duration-300 text-center"
+                <motion.div
+                  className="neo-border px-8 py-3 rounded-xl text-neon-cyan font-space font-medium hover:bg-glass-white transition-all duration-300 text-center cursor-pointer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   View Launch Schedule
-                </motion.a>
+                </motion.div>
               </Link>
             </div>
             
