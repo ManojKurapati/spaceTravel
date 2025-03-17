@@ -10,7 +10,7 @@ export const Header = () => {
     <header className="relative z-10 px-4 md:px-8 py-4">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/">
-          <a className="flex items-center">
+          <div className="flex items-center cursor-pointer">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-3">
               <circle cx="20" cy="20" r="19" stroke="url(#logo-gradient)" strokeWidth="2"/>
               <path d="M20 10L25 22H15L20 10Z" fill="#00F0FF"/>
@@ -25,21 +25,21 @@ export const Header = () => {
             <h1 className="font-orbitron text-xl md:text-2xl font-bold bg-gradient-to-r from-cosmic-purple to-neon-cyan bg-clip-text text-transparent">
               DUBAI SPACEPORT
             </h1>
-          </a>
+          </div>
         </Link>
         
         <nav className="hidden md:flex items-center space-x-8">
           <Link href="/#destinations">
-            <a className="text-white/80 hover:text-neon-cyan transition">Destinations</a>
+            <div className="text-white/80 hover:text-neon-cyan transition cursor-pointer">Destinations</div>
           </Link>
           <Link href="/#packages">
-            <a className="text-white/80 hover:text-neon-cyan transition">Packages</a>
+            <div className="text-white/80 hover:text-neon-cyan transition cursor-pointer">Packages</div>
           </Link>
           <Link href="/#accommodations">
-            <a className="text-white/80 hover:text-neon-cyan transition">Accommodations</a>
+            <div className="text-white/80 hover:text-neon-cyan transition cursor-pointer">Accommodations</div>
           </Link>
           <Link href="/about">
-            <a className="text-white/80 hover:text-neon-cyan transition">About Us</a>
+            <div className="text-white/80 hover:text-neon-cyan transition cursor-pointer">About Us</div>
           </Link>
         </nav>
         
@@ -74,24 +74,24 @@ export const Header = () => {
           </button>
           <div className="flex flex-col space-y-8 items-center font-orbitron text-xl">
             <Link href="/#destinations">
-              <a className="text-white hover:text-neon-cyan transition" onClick={() => setIsMobileMenuOpen(false)}>
+              <div className="text-white hover:text-neon-cyan transition cursor-pointer" onClick={() => setIsMobileMenuOpen(false)}>
                 Destinations
-              </a>
+              </div>
             </Link>
             <Link href="/#packages">
-              <a className="text-white hover:text-neon-cyan transition" onClick={() => setIsMobileMenuOpen(false)}>
+              <div className="text-white hover:text-neon-cyan transition cursor-pointer" onClick={() => setIsMobileMenuOpen(false)}>
                 Packages
-              </a>
+              </div>
             </Link>
             <Link href="/#accommodations">
-              <a className="text-white hover:text-neon-cyan transition" onClick={() => setIsMobileMenuOpen(false)}>
+              <div className="text-white hover:text-neon-cyan transition cursor-pointer" onClick={() => setIsMobileMenuOpen(false)}>
                 Accommodations
-              </a>
+              </div>
             </Link>
             <Link href="/about">
-              <a className="text-white hover:text-neon-cyan transition" onClick={() => setIsMobileMenuOpen(false)}>
+              <div className="text-white hover:text-neon-cyan transition cursor-pointer" onClick={() => setIsMobileMenuOpen(false)}>
                 About Us
-              </a>
+              </div>
             </Link>
             <Link href="/dashboard">
               <HolographicButton 
