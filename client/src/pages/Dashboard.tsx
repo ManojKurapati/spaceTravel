@@ -230,8 +230,10 @@ const Dashboard = () => {
                         
                         <div className="flex justify-between">
                           <Link href={`/booking/${booking.id}`}>
-                            <div className="neo-border px-4 py-2 rounded-lg text-neon-cyan text-sm hover:bg-glass-white transition-all cursor-pointer">
-                              View Details
+                            <div className="inline-block">
+                              <div className="neo-border px-4 py-2 rounded-lg text-neon-cyan text-sm hover:bg-glass-white transition-all cursor-pointer">
+                                View Details
+                              </div>
                             </div>
                           </Link>
                           
@@ -298,8 +300,10 @@ const Dashboard = () => {
                         
                         <div className="flex justify-between">
                           <Link href={`/booking/${booking.id}`}>
-                            <div className="neo-border px-4 py-2 rounded-lg text-neon-cyan text-sm hover:bg-glass-white transition-all cursor-pointer">
-                              View Details
+                            <div className="inline-block">
+                              <div className="neo-border px-4 py-2 rounded-lg text-neon-cyan text-sm hover:bg-glass-white transition-all cursor-pointer">
+                                View Details
+                              </div>
                             </div>
                           </Link>
                           
