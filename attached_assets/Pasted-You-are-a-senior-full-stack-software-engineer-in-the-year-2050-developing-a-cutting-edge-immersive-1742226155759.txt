@@ -1,0 +1,57 @@
+You are a senior full-stack software engineer in the year 2050, developing a cutting-edge, immersive space travel booking platform for Dubai’s commercial spaceport. Your mission is to build a functional, visually stunning prototype that enables users to book and manage space trips, all with a futuristic design and AI-driven UX.
+
+🌌 Core Functional Requirements:
+Trip Scheduling & Booking System:
+
+Departure: Always Dubai Spaceport.
+Destinations: ISS, Lunar Hotels, Mars Colony Alpha, Orbit Resorts.
+Seat Classes: Luxury Cabin, Economy Shuttle, VIP Zero-Gravity Experience.
+Interactive calendar with real-time availability & countdown timers.
+Pricing & Packages:
+
+Dynamic pricing based on destination, seat class, travel dates.
+Custom experience bundles: “Moonlight Honeymoon,” “Mars Explorer Pro,” “Zero-G Luxury Retreat.”
+Promo codes and dynamic discounts.
+Accommodation Recommendations:
+
+AI suggests space hotels/orbital stations based on user preferences.
+Filters: Gravity simulation, window views, AI assistant availability, stargazing decks.
+Include user reviews and image galleries (mock data).
+User Dashboard:
+
+Manage active and past bookings, countdown to launch.
+Real-time mission status updates.
+AI-generated space travel tips, safety briefings, packing suggestions.
+🌟 Next-Level Features:
+Payment Simulation:
+
+Simulate secure checkout experience with mock payment gateway.
+Multiple currency support (AED, BTC, ETH, USD).
+3D Elements Integration:
+
+Include 3D cabin previews or space hotel walkthroughs (simulate with images or placeholders).
+“View in AR” button to preview destinations (mock functionality).
+Booking History with NFT Souvenirs:
+
+Generate NFT boarding passes or digital space souvenirs for completed trips.
+Store in User Dashboard with transaction history.
+AI Concierge Chatbot:
+
+Built-in AI assistant to guide trip planning, answer questions, suggest packages.
+💻 Tech Stack & Output Format:
+Frontend: React + Tailwind CSS.
+Animations: Framer Motion for smooth transitions.
+3D/AR simulation: Use mock images or embed with Three.js placeholders.
+Backend Simulation: Use mock JSON data; no actual server needed.
+Output: Provide everything in one complete code file with clear comments and instructions.
+🎨 Design Aesthetic:
+Inspired by sci-fi space station UIs, use glassmorphism, neon accents, dark mode.
+Smooth, futuristic UI elements — holographic buttons, orbit path animations, interactive countdowns.
+Fully responsive for desktop and mobile.
+🏆 Challenge Context:
+This is for a high-stakes prompt engineering challenge. Your goal is to deliver a functional, jaw-dropping prototype that showcases:
+
+Functionality + UX
+Efficient, clean code
+Creative and futuristic design
+Let’s build the future of space travel from Dubai to the Stars. Make this the most advanced space travel booking prototype ever created.
