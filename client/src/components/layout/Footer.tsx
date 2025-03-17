@@ -23,14 +23,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div>
             <Link href="/">
-              <a className="flex items-center space-x-2 mb-6">
+              <div className="flex items-center space-x-2 mb-6 cursor-pointer">
                 <div className="h-10 w-10 rounded-full bg-space-blue/20 border border-space-blue/50 flex items-center justify-center">
                   <i className="fas fa-rocket text-space-blue"></i>
                 </div>
                 <span className="font-space font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-space-blue to-space-purple">
                   DUBAI SPACEPORT
                 </span>
-              </a>
+              </div>
             </Link>
             <p className="text-white/60 mb-4">
               The gateway to the stars since 2040. Dubai's premier commercial spaceport offering luxury travel beyond Earth.
@@ -54,22 +54,22 @@ const Footer = () => {
           <div>
             <h3 className="font-space font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link href="/destinations"><a className="text-white/60 hover:text-space-blue transition-colors">Destinations</a></Link></li>
-              <li><Link href="/experiences"><a className="text-white/60 hover:text-space-blue transition-colors">Experience Packages</a></Link></li>
-              <li><Link href="/schedule"><a className="text-white/60 hover:text-space-blue transition-colors">Launch Schedule</a></Link></li>
-              <li><Link href="/cabins"><a className="text-white/60 hover:text-space-blue transition-colors">Cabin Classes</a></Link></li>
-              <li><Link href="/safety"><a className="text-white/60 hover:text-space-blue transition-colors">Safety Protocols</a></Link></li>
+              <li><Link href="/destinations"><div className="text-white/60 hover:text-space-blue transition-colors cursor-pointer">Destinations</div></Link></li>
+              <li><Link href="/experiences"><div className="text-white/60 hover:text-space-blue transition-colors cursor-pointer">Experience Packages</div></Link></li>
+              <li><Link href="/schedule"><div className="text-white/60 hover:text-space-blue transition-colors cursor-pointer">Launch Schedule</div></Link></li>
+              <li><Link href="/cabins"><div className="text-white/60 hover:text-space-blue transition-colors cursor-pointer">Cabin Classes</div></Link></li>
+              <li><Link href="/safety"><div className="text-white/60 hover:text-space-blue transition-colors cursor-pointer">Safety Protocols</div></Link></li>
             </ul>
           </div>
           
           <div>
             <h3 className="font-space font-bold text-lg mb-4">Support</h3>
             <ul className="space-y-2">
-              <li><Link href="/contact"><a className="text-white/60 hover:text-space-blue transition-colors">Contact Us</a></Link></li>
-              <li><Link href="/faq"><a className="text-white/60 hover:text-space-blue transition-colors">FAQs</a></Link></li>
-              <li><Link href="/medical"><a className="text-white/60 hover:text-space-blue transition-colors">Medical Requirements</a></Link></li>
-              <li><Link href="/training"><a className="text-white/60 hover:text-space-blue transition-colors">Training Programs</a></Link></li>
-              <li><Link href="/terms"><a className="text-white/60 hover:text-space-blue transition-colors">Terms & Conditions</a></Link></li>
+              <li><Link href="/contact"><div className="text-white/60 hover:text-space-blue transition-colors cursor-pointer">Contact Us</div></Link></li>
+              <li><Link href="/faq"><div className="text-white/60 hover:text-space-blue transition-colors cursor-pointer">FAQs</div></Link></li>
+              <li><Link href="/medical"><div className="text-white/60 hover:text-space-blue transition-colors cursor-pointer">Medical Requirements</div></Link></li>
+              <li><Link href="/training"><div className="text-white/60 hover:text-space-blue transition-colors cursor-pointer">Training Programs</div></Link></li>
+              <li><Link href="/terms"><div className="text-white/60 hover:text-space-blue transition-colors cursor-pointer">Terms & Conditions</div></Link></li>
             </ul>
           </div>
           
@@ -102,9 +102,9 @@ const Footer = () => {
             © 2050 Dubai Spaceport. All rights reserved.
           </div>
           <div className="flex space-x-6">
-            <Link href="/privacy"><a className="text-white/60 hover:text-space-blue transition-colors text-sm">Privacy Policy</a></Link>
-            <Link href="/terms"><a className="text-white/60 hover:text-space-blue transition-colors text-sm">Terms of Service</a></Link>
-            <Link href="/cookies"><a className="text-white/60 hover:text-space-blue transition-colors text-sm">Cookie Policy</a></Link>
+            <Link href="/privacy"><div className="text-white/60 hover:text-space-blue transition-colors text-sm cursor-pointer">Privacy Policy</div></Link>
+            <Link href="/terms"><div className="text-white/60 hover:text-space-blue transition-colors text-sm cursor-pointer">Terms of Service</div></Link>
+            <Link href="/cookies"><div className="text-white/60 hover:text-space-blue transition-colors text-sm cursor-pointer">Cookie Policy</div></Link>
           </div>
         </div>
       </div>

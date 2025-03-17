@@ -1,5 +1,4 @@
 import React, { ReactNode, ButtonHTMLAttributes } from 'react';
-import { motion } from 'framer-motion';
 import { cn } from '../../lib/utils';
 
 interface HolographicButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -21,9 +20,9 @@ export const HolographicButton = ({
   const baseClasses = "relative overflow-hidden font-orbitron font-semibold rounded-full transition-all duration-300 inline-flex items-center justify-center";
   
   const variantClasses = {
-    primary: "bg-gradient-to-r from-cosmic-purple to-neon-cyan text-white shadow-neon",
-    secondary: "bg-space-black border border-neon-cyan text-neon-cyan hover:shadow-neon-glow",
-    outline: "bg-transparent border border-neon-cyan text-neon-cyan hover:bg-neon-cyan/10"
+    primary: "bg-gradient-to-r from-cosmic-purple to-neon-cyan text-white shadow-neon hover:scale-105 active:scale-95",
+    secondary: "bg-space-black border border-neon-cyan text-neon-cyan hover:shadow-neon-glow hover:scale-105 active:scale-95",
+    outline: "bg-transparent border border-neon-cyan text-neon-cyan hover:bg-neon-cyan/10 hover:scale-105 active:scale-95"
   };
   
   const sizeClasses = {
@@ -40,18 +39,14 @@ export const HolographicButton = ({
   );
   
   return (
-    <motion.button
-      whileHover={{ scale: 1.03 }}
-      whileTap={{ scale: 0.98 }}
+    <button
       className={classes}
-      onClick={props.onClick}
-      type={props.type}
-      disabled={props.disabled}
+      {...props}
     >
       {icon && <span className="mr-2">{icon}</span>}
       {children}
       <span className="absolute inset-0 bg-gradient-to-r from-cosmic-purple/20 to-neon-cyan/20 opacity-0 hover:opacity-30 transition-opacity duration-300"></span>
-    </motion.button>
+    </button>
   );
 };
 
