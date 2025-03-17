@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 233 82% 4%;
+    --foreground: 0 0% 100%;
+    --card: 224 58% 10%;
+    --card-foreground: 0 0% 100%;
+    --popover: 224 58% 10%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 268 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 187 100% 50%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 223 30% 23%;
+    --muted-foreground: 215 20% 80%;
+    --accent: 187 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 350 100% 61%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 215 27% 30%;
+    --input: 215 27% 30%;
+    --ring: 268 100% 50%;
+    --radius: 0.5rem;
+    
+    --space-blue: 231 64% 12%;
+    --space-black: 226 45% 7%;
+    --cosmic-purple: 268 100% 50%;
+    --neon-cyan: 187 100% 50%;
+    --stellar-gray: 223 30% 23%;
+    --success-green: 142 100% 50%;
+    --error-red: 350 100% 61%;
+    --warning-yellow: 50 100% 50%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background-color: hsl(var(--space-black));
+    background-image: 
+      radial-gradient(circle at 20% 30%, rgba(108, 0, 255, 0.15) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(0, 240, 255, 0.15) 0%, transparent 40%);
+    color: white;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-opacity-30 backdrop-blur-md border border-opacity-20 shadow-lg;
+    background-color: rgba(11, 15, 47, 0.3);
+    border-color: rgba(108, 0, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+  
+  .neon-border {
+    @apply relative;
+  }
+  
+  .neon-border::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(90deg, hsl(var(--cosmic-purple)), hsl(var(--neon-cyan)));
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .holographic-button {
+    @apply relative overflow-hidden transition-all duration-300;
+  }
+
+  .holographic-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(0, 240, 255, 0.2), transparent);
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+  }
+
+  .holographic-button:hover::before {
+    left: 100%;
+  }
+
+  .planet-orbit {
+    @apply border border-dashed border-opacity-30 rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+    border-color: rgba(108, 0, 255, 0.3);
+  }
+
+  .star {
+    @apply absolute bg-white rounded-full opacity-70 animate-twinkle;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 0.3; }
+  }
+
+  @keyframes countdown {
+    from { stroke-dashoffset: 0; }
+    to { stroke-dashoffset: 283; }
+  }
+
+  .countdown-circle {
+    stroke-dasharray: 283;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+  }
+
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes orbit {
+    0% { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-orbit {
+    animation: orbit 20s linear infinite;
+  }
+
+  .animate-twinkle {
+    animation: twinkle ease infinite;
+  }
+}
