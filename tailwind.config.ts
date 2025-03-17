@@ -11,6 +11,7 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
+        // Shadcn UI colors
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -61,6 +62,16 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        
+        // Custom space theme colors
+        'space-dark': '#050714',
+        'space-blue': '#0A0F29',
+        'space-purple': '#1A1040',
+        'neon-cyan': '#00F0FF',
+        'neon-magenta': '#FF00E5',
+        'neon-blue': '#3300FF',
+        'glass-white': 'rgba(255, 255, 255, 0.1)',
+        'glass-dark': 'rgba(10, 15, 41, 0.7)'
       },
       keyframes: {
         "accordion-down": {
@@ -79,10 +90,38 @@ export default {
             height: "0",
           },
         },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' }
+        },
+        orbit: {
+          '0%': { transform: 'rotate(0deg) translateX(10px) rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg) translateX(10px) rotate(-360deg)' }
+        },
+        holographic: {
+          '0%': {
+            transform: 'rotate(30deg) translateX(-100%)'
+          },
+          '100%': {
+            transform: 'rotate(30deg) translateX(100%)'
+          }
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'orbit': 'orbit 20s linear infinite',
+        'holographic': 'holographic 3s linear infinite'
+      },
+      backgroundImage: {
+        'stars': "url('https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')",
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
+      fontFamily: {
+        'space': ['"Space Grotesk"', 'sans-serif'],
+        'body': ['Inter', 'sans-serif']
       },
     },
   },
