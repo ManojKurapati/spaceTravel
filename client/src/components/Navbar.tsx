@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className="glassmorphism sticky top-0 z-50">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link href="/">
-          <a className="flex items-center gap-2">
+          <div className="flex items-center gap-2 cursor-pointer">
             <div className="w-10 h-10 relative">
               <div className="absolute inset-0 rounded-full bg-neon-cyan opacity-20 animate-pulse"></div>
               <div className="absolute inset-[2px] rounded-full bg-space-dark flex items-center justify-center">
@@ -18,54 +18,54 @@ const Navbar = () => {
               </div>
             </div>
             <span className="font-space font-bold text-xl tracking-wider">DUBAI SPACEPORT</span>
-          </a>
+          </div>
         </Link>
         
         <div className="hidden md:flex space-x-6 items-center">
           <Link href="/#destinations">
-            <a className={`text-white hover:text-neon-cyan transition duration-300 ${
+            <div className={`text-white hover:text-neon-cyan transition duration-300 cursor-pointer ${
               location === '/#destinations' ? 'text-neon-cyan' : ''
             }`}>
               Destinations
-            </a>
+            </div>
           </Link>
           <Link href="/#experiences">
-            <a className={`text-white hover:text-neon-cyan transition duration-300 ${
+            <div className={`text-white hover:text-neon-cyan transition duration-300 cursor-pointer ${
               location === '/#experiences' ? 'text-neon-cyan' : ''
             }`}>
               Experiences
-            </a>
+            </div>
           </Link>
           <Link href="/#accommodations">
-            <a className={`text-white hover:text-neon-cyan transition duration-300 ${
+            <div className={`text-white hover:text-neon-cyan transition duration-300 cursor-pointer ${
               location === '/#accommodations' ? 'text-neon-cyan' : ''
             }`}>
               Accommodations
-            </a>
+            </div>
           </Link>
           <Link href="/about">
-            <a className={`text-white hover:text-neon-cyan transition duration-300 ${
+            <div className={`text-white hover:text-neon-cyan transition duration-300 cursor-pointer ${
               location === '/about' ? 'text-neon-cyan' : ''
             }`}>
               About
-            </a>
+            </div>
           </Link>
         </div>
         
         <div className="flex items-center gap-4">
           <Link href="/dashboard">
-            <a className="neo-border rounded-full px-4 py-1.5 text-neon-cyan text-sm hover:bg-glass-white transition-all duration-300">
+            <div className="neo-border rounded-full px-4 py-1.5 text-neon-cyan text-sm hover:bg-glass-white transition-all duration-300 cursor-pointer">
               Dashboard
-            </a>
+            </div>
           </Link>
           <Link href="/#book">
-            <motion.a 
-              className="bg-gradient-to-r from-neon-blue to-neon-magenta rounded-full px-4 py-1.5 text-white text-sm hover:shadow-lg hover:shadow-neon-magenta/20 transition-all duration-300"
+            <motion.div 
+              className="bg-gradient-to-r from-neon-blue to-neon-magenta rounded-full px-4 py-1.5 text-white text-sm hover:shadow-lg hover:shadow-neon-magenta/20 transition-all duration-300 cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Book Now
-            </motion.a>
+            </motion.div>
           </Link>
           
           {/* Mobile menu button */}
@@ -89,24 +89,24 @@ const Navbar = () => {
         >
           <div className="py-4 px-4 flex flex-col space-y-4">
             <Link href="/#destinations">
-              <a className="text-white py-2 hover:text-neon-cyan" onClick={() => setMobileMenuOpen(false)}>
+              <div className="text-white py-2 hover:text-neon-cyan cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
                 Destinations
-              </a>
+              </div>
             </Link>
             <Link href="/#experiences">
-              <a className="text-white py-2 hover:text-neon-cyan" onClick={() => setMobileMenuOpen(false)}>
+              <div className="text-white py-2 hover:text-neon-cyan cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
                 Experiences
-              </a>
+              </div>
             </Link>
             <Link href="/#accommodations">
-              <a className="text-white py-2 hover:text-neon-cyan" onClick={() => setMobileMenuOpen(false)}>
+              <div className="text-white py-2 hover:text-neon-cyan cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
                 Accommodations
-              </a>
+              </div>
             </Link>
             <Link href="/about">
-              <a className="text-white py-2 hover:text-neon-cyan" onClick={() => setMobileMenuOpen(false)}>
+              <div className="text-white py-2 hover:text-neon-cyan cursor-pointer" onClick={() => setMobileMenuOpen(false)}>
                 About
-              </a>
+              </div>
             </Link>
           </div>
         </motion.div>

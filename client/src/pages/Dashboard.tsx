@@ -159,9 +159,9 @@ const Dashboard = () => {
                   <h3 className="font-space font-medium text-xl mb-2">No Upcoming Trips</h3>
                   <p className="text-gray-400 mb-6">You haven't booked any space journeys yet. Ready to explore the cosmos?</p>
                   <Link href="/#book">
-                    <a className="bg-gradient-to-r from-neon-blue to-neon-magenta px-6 py-3 rounded-xl text-white font-space font-medium hover:shadow-lg hover:shadow-neon-magenta/30 transition-all duration-300 inline-flex items-center gap-2">
+                    <div className="bg-gradient-to-r from-neon-blue to-neon-magenta px-6 py-3 rounded-xl text-white font-space font-medium hover:shadow-lg hover:shadow-neon-magenta/30 transition-all duration-300 inline-flex items-center gap-2 cursor-pointer">
                       Book Your First Trip
-                    </a>
+                    </div>
                   </Link>
                 </div>
               ) : (
