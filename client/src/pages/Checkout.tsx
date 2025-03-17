@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useLocation, Link, useNavigate } from 'wouter';
+import { useLocation, Link } from 'wouter';
 import { motion } from 'framer-motion';
 import { useMutation } from '@tanstack/react-query';
 import { apiRequest } from '@/lib/queryClient';
@@ -166,10 +166,10 @@ const Checkout = () => {
           className="mb-8"
         >
           <Link href="/">
-            <a className="text-neon-cyan hover:text-neon-magenta transition-colors flex items-center gap-2 mb-6">
+            <div className="text-neon-cyan hover:text-neon-magenta transition-colors flex items-center gap-2 mb-6 cursor-pointer">
               <i className="fas fa-arrow-left"></i>
               <span>Continue Exploring</span>
-            </a>
+            </div>
           </Link>
           
           <h1 className="font-space font-bold text-3xl md:text-4xl mb-4">Secure Checkout</h1>
@@ -391,7 +391,7 @@ const Checkout = () => {
                   />
                 </div>
                 <Label htmlFor="terms" className="text-sm">
-                  I agree to the <a href="#" className="text-neon-cyan hover:underline">Terms and Conditions</a> and <a href="#" className="text-neon-cyan hover:underline">Space Travel Liability Waiver</a>. I confirm that I have read and understand the <a href="#" className="text-neon-cyan hover:underline">Health Requirements</a> for space travel.
+                  I agree to the <span className="text-neon-cyan hover:underline cursor-pointer">Terms and Conditions</span> and <span className="text-neon-cyan hover:underline cursor-pointer">Space Travel Liability Waiver</span>. I confirm that I have read and understand the <span className="text-neon-cyan hover:underline cursor-pointer">Health Requirements</span> for space travel.
                 </Label>
               </div>
               

@@ -121,14 +121,16 @@ const Dashboard = () => {
               <p className="text-gray-400">Manage your bookings and prepare for your cosmic adventures</p>
             </div>
             <Link href="/#book">
-              <motion.div 
-                className="mt-4 md:mt-0 bg-gradient-to-r from-neon-blue to-neon-magenta px-6 py-3 rounded-xl text-white font-space font-medium hover:shadow-lg hover:shadow-neon-magenta/30 transition-all duration-300 inline-flex items-center gap-2 cursor-pointer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <i className="fas fa-rocket"></i>
-                Book New Trip
-              </motion.div>
+              <div className="inline-block">
+                <motion.div 
+                  className="mt-4 md:mt-0 bg-gradient-to-r from-neon-blue to-neon-magenta px-6 py-3 rounded-xl text-white font-space font-medium hover:shadow-lg hover:shadow-neon-magenta/30 transition-all duration-300 inline-flex items-center gap-2 cursor-pointer"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <i className="fas fa-rocket"></i>
+                  Book New Trip
+                </motion.div>
+              </div>
             </Link>
           </div>
           
@@ -159,8 +161,10 @@ const Dashboard = () => {
                   <h3 className="font-space font-medium text-xl mb-2">No Upcoming Trips</h3>
                   <p className="text-gray-400 mb-6">You haven't booked any space journeys yet. Ready to explore the cosmos?</p>
                   <Link href="/#book">
-                    <div className="bg-gradient-to-r from-neon-blue to-neon-magenta px-6 py-3 rounded-xl text-white font-space font-medium hover:shadow-lg hover:shadow-neon-magenta/30 transition-all duration-300 inline-flex items-center gap-2 cursor-pointer">
-                      Book Your First Trip
+                    <div className="inline-block cursor-pointer">
+                      <div className="bg-gradient-to-r from-neon-blue to-neon-magenta px-6 py-3 rounded-xl text-white font-space font-medium hover:shadow-lg hover:shadow-neon-magenta/30 transition-all duration-300 inline-flex items-center gap-2">
+                        Book Your First Trip
+                      </div>
                     </div>
                   </Link>
                 </div>
