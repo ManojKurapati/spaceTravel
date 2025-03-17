@@ -4,18 +4,46 @@ import { motion } from 'framer-motion';
 import { Link } from 'wouter';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Booking } from '@shared/schema';
+import { Booking, Destination, SeatClass } from '@shared/schema';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Progress } from '@/components/ui/progress';
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState('upcoming');
   
-  // Fetch user bookings
-  const { data: bookings, isLoading } = useQuery<Booking[]>({
+  // Fetch bookings and associated data
+  const { data: bookingsData, isLoading: isLoadingBookings } = useQuery<Booking[]>({
     queryKey: ['/api/bookings'],
   });
   
+  const { data: destinationsData, isLoading: isLoadingDestinations } = useQuery<Destination[]>({
+    queryKey: ['/api/destinations'],
+  });
+  
+  const { data: seatClassesData, isLoading: isLoadingSeatClasses } = useQuery<SeatClass[]>({
+    queryKey: ['/api/seat-classes'],
+  });
+  
+  const isLoading = isLoadingBookings || isLoadingDestinations || isLoadingSeatClasses;
+  
+  // Create merged data structure with booking details
+  const bookingsWithDetails = bookingsData?.map(booking => {
+    const destination = destinationsData?.find(d => d.id === booking.destinationId);
+    const seatClass = seatClassesData?.find(s => s.id === booking.seatClassId);
+    
+    return {
+      ...booking,
+      destination: {
+        name: destination?.name || 'Unknown Destination',
+        location: destination?.location || 'Location Unknown'
+      },
+      seatClass: {
+        name: seatClass?.name || 'Unknown Class'
+      }
+    };
+  });
+  
+  // Fallback sample data for development
   const placeholderBookings = [
     {
       id: 1,
@@ -61,7 +89,7 @@ const Dashboard = () => {
     }
   ];
   
-  const displayBookings = bookings || placeholderBookings;
+  const displayBookings = bookingsWithDetails || placeholderBookings;
   
   // Filter bookings based on active tab
   const upcomingBookings = displayBookings.filter(b => 
@@ -149,8 +177,8 @@ const Dashboard = () => {
                       <div className="p-6">
                         <div className="flex justify-between items-start mb-4">
                           <div>
-                            <h3 className="font-space font-medium text-xl">{booking.destination.name}</h3>
-                            <p className="text-gray-400 text-sm">{booking.destination.location}</p>
+                            <h3 className="font-space font-medium text-xl">{booking.destination?.name || 'Unknown Destination'}</h3>
+                            <p className="text-gray-400 text-sm">{booking.destination?.location || 'Location unknown'}</p>
                           </div>
                           <div className={`px-3 py-1 rounded-full text-xs ${
                             booking.status === 'confirmed' ? 'bg-green-500/20 text-green-400' : 
@@ -238,8 +266,8 @@ const Dashboard = () => {
                       <div className="p-6">
                         <div className="flex justify-between items-start mb-4">
                           <div>
-                            <h3 className="font-space font-medium text-xl">{booking.destination.name}</h3>
-                            <p className="text-gray-400 text-sm">{booking.destination.location}</p>
+                            <h3 className="font-space font-medium text-xl">{booking.destination?.name || 'Unknown Destination'}</h3>
+                            <p className="text-gray-400 text-sm">{booking.destination?.location || 'Location unknown'}</p>
                           </div>
                           <div className="p-2 rounded-lg bg-glass-white">
                             <i className="fas fa-check-circle text-neon-cyan"></i>
